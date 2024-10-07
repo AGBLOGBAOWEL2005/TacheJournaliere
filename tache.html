@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="heade">
+        <div class="hamberguer"></div>
+        <div class="numero" style="display: none;">
+            <p>Contact:</p>
+            <p><a href="tel:68 57 86 47">+229 68 57 86 43</a></p>
+            <p><a href="mailto:mawunan14@gmail.com">mawunan14@gmail.com</a></p>
+        </div>
+        <div id="elementBerguer">
+            <button id="commentaire">Laisser un commentaire</button>
+        </div>
+    </div>
+    
+    <div class="premier">
+        <div class="slider">
+            <img src="image1.jpg" alt="" onmouseover="arrete()" onmouseout="defiler()" id="image1" style="width: 500px;height: 500px;">
+            <p id="superieur" onmouseover="arrete()" onclick="superieur()">&gt;</p>
+            <p id="inferieur" onmouseover="arrete()" onclick="inferieur()">&lt;</p>
+        </div>
+    </div>
+
+    <div class="deuxieme">
+        <div style="margin-left: 50px;">
+            <div id="entete">
+                <button id="supprimer" style="display: none;">Supprimer</button>
+                <button id="fait" style="display: none;">Fait</button>
+                <button id="annuler" style="display: none;">Annuler</button>
+            </div>
+            <h4>Formulaire pour vos Tâches</h4>
+            <div class="divtache">
+                <input type="text" id="tache">
+                <label for="tache" class="labeltache">Tâche à faire</label>
+            </div>
+            <div class="divdate">
+                <input type="text" id="date">
+                <label for="date" class="labeldate">Date</label>
+            </div>
+            <input type="button" value="Enregistrer" id="enregistrer">
+        </div>
+    </div>
+
+    <h2>Vos Tâches</h2>
+    <div class="tableau">
+        <table id="resultat">
+            <tr><th>Tâche</th><th>Date</th></tr>
+        </table>
+    </div>
+    
+    <button id="boutton_haut" onclick="buttonhaut()">&#8679;</button>
+    
+    <div>
+        <button id="Contacter_moi">Contactez-moi</button>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

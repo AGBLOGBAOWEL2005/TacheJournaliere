@@ -1,0 +1,403 @@
+
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 100px;
+}
+table,tr,td,th{
+    padding: 20px;
+    border: 1px solid black;
+}
+tr{
+    cursor: pointer;
+    background-color: rgba(255, 166, 0, 0.423);
+}
+tr:hover{
+    background-color: rgba(255, 166, 0, 0.129);
+}
+h2{
+    margin-top: 100px;
+    text-align: center;
+}
+#entete{
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+    grid-template-rows: repeat(1,50px); 
+    grid-gap: 5px;
+    position: fixed;
+    top: -0px;
+    left: 250px;
+    z-index: 111;
+}
+.selected{
+    background-color: lightblue;
+}
+.barre {
+    text-decoration: line-through;
+}
+.premier{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 600px;
+    height: 500px;
+    position: relative;
+    top: -25px;
+    left: 0;
+}
+.deuxieme{
+    width: 600px;
+    height: 500px;
+    border: 1px solid green;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    position: relative;
+    left: 30px;
+    top: -25px;
+}
+img{
+    border-radius: 50px;
+}
+.tableau{
+    clear: both;
+    margin-top: 100px;
+}
+body{
+    position: relative;
+    left: 0;
+    top: 0;
+}
+h4{
+    letter-spacing: 2px;
+    position: absolute;
+    left: 150px;
+    top: -0px;
+}
+.labeltache{
+    position: absolute;
+    left: 50px;
+    top: -0px;
+    z-index: 11;
+    transition: 1.5s;
+    letter-spacing: 2.5px;
+}
+.divtache{
+    position: relative;
+    left: 0px;
+    top: 100px;
+}
+input[id="tache"]{
+    margin-left: -50px;
+    margin-top:  -100px;
+    width: 400px;
+    height: 50px;
+    z-index: 1;
+    border: 1px solid green;
+    border-radius: 10px;
+    margin-bottom: 100px;
+}
+input[id="tache"]:focus ~ .labeltache,
+input[id="tache"]:user-valid ~ .labeltache{
+    position: absolute;
+    left: 0px;
+    top: -30px;
+    z-index: 11;
+    letter-spacing: 2px;
+    width: 200px;
+    text-align: center;
+    background-color: rgba(0, 128, 0, 0.993);
+    border: 1px solid green;
+    border-radius: 5px;
+    height: 25px;
+    padding-top: 5px;
+}
+.divdate{
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+input[id="date"]{
+    position: absolute;
+    left: -50px;
+    top: 80px;
+    width: 400px;
+    height: 50px;
+    border: 1px solid green;
+    border-radius: 10px;
+    z-index: 1;
+    
+}
+.labeldate{      
+    position: absolute; 
+    top: 100px;
+    letter-spacing: 2px;
+    z-index: 11;
+    margin-left: 100px;
+    transition: 1.5s;
+}
+input[id="date"]:focus ~.labeldate,
+input[id="date"]:user-valid ~.labeldate{
+    position: absolute; 
+    top: 70px;
+    letter-spacing: 2px;
+    z-index: 11;
+    margin-left: 10px;
+    background-color: green;
+    border-radius: 10px;
+    width: 200px;
+    height: 25px;
+    text-align: center;
+    padding-top: 5px;
+}
+#enregistrer{
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    border-radius: 10px;
+    margin-left: 50px;
+    border: 1px solid green;
+    cursor: pointer;
+    transition: 1.5s;
+    font-size: 20px;
+    margin-top: 200px;
+}
+#enregistrer:hover{
+    width: 250px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 5px;
+    margin-left: 40px;
+}
+#supprimer{
+    background-color:  black ;
+    border: 1px solid  black;
+    transition: 1s;
+     color: white;
+}
+#fait{
+    background-color:  black;
+    border: 1px solid  black;
+    color: white;
+}
+
+#annuler{
+    background-color:  black;
+    border: 1px solid black;
+    transition: 1s;
+    color: white;
+}
+.slider{
+    position: relative;
+    top: 100px;
+    left: 0;
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    border-radius: 100px;
+    z-index: 1;
+}
+#inferieur{
+    position: absolute;
+    top: 200px;
+    left: 20px;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border-radius: 100px;
+    cursor: pointer;
+}
+#superieur{
+    position: absolute;
+    top: 200px;
+    left: 430px;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.image1{
+    transition: 1.5s;
+    z-index: 1;
+}
+.hamberguer{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 15px;
+    left: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hamberguer::before{
+    background-color: black;
+    width: 28px;
+    height: 5px;
+    content: "";
+    position: fixed;
+    top: 15px;
+    left: 5px;
+    border-radius: 3px;
+    box-shadow: 6px 10px black;
+    transform: translateY(-10px);
+}
+.hamberguer::after{
+    background-color: black;
+    width: 28px;
+    height: 5px;
+    content: "";
+    position: fixed;
+    top: 15px;
+    left: 5px;
+    border-radius: 3px;
+    transform: translateY(10px);
+}
+
+#elementBerguer{
+ width: 1240px;
+ height: 80px;
+ color: white;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: fixed;
+ top: 0px;
+ left: 5px;
+ z-index: 9;
+ 
+}
+.elementB{
+    width: 400px;
+    height: 600px;
+    background-color: green;
+    color: white;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    z-index: 9;
+}
+ul{
+    display: inline;
+    margin-right: 80px;
+}
+#commentaire{
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    border-radius: 10px;
+    margin-left: 50px;
+    border: 1px solid green;
+    cursor: pointer;
+    transition: 1.5s;
+    font-size: 20px;
+    margin-right: 600px;
+    color: white;
+}
+#commentaire:hover{
+    background-color: black;
+}
+#Contacter_moi{
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: skyblue;
+    border-radius: 10px;
+    margin-left: 50px;
+    border: 1px solid skyblue;
+    cursor: pointer;
+    transition: 1.5s;
+    font-size: 20px;
+    margin-top: 200px;
+    color: white;
+   margin-left: 1000px;
+   margin-bottom: 50px;
+}
+#Contacter_moi:hover{
+    width: 250px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 5px;
+    margin-left: 40px;
+    margin-left: 925px;
+}
+ #boutton_haut {
+    display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 110; 
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #000;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 50%;
+    }
+    
+    #boutton_haut:hover {
+        background-color: #555;
+    }
+    .heade .numero.responsive {
+        position: fixed;
+        top: 30px;
+        left: 0;
+        background-color: black;
+        color: white;
+        width: 200px;
+        height: 200px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        z-index: 5;
+        padding: 30px;
+    }
+    .hamberguer.active::before {
+        transform: rotate(135deg) translate(5px, 5px);
+        box-shadow: 0 0 black;
+        color: white;
+    }
+    
+    .hamberguer.active::after {
+        transform: rotate(-135deg) translate(5px, -5px);
+        color: white;
+    }
+       
+    a{
+        text-decoration: none;
+        color: white;
+    }
